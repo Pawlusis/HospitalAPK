@@ -9,6 +9,7 @@ class Patients(models.Model):
     admittingtime_patient = models.DateTimeField()
     dischargetime_patient = models.DateTimeField(default='', blank=True, null=True)
     decribe_patient = models.TextField()
+    attachments = models.FileField(upload_to="attachments", null=True, blank=True)
 
 
     def __str__(self):
